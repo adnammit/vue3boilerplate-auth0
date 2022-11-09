@@ -34,7 +34,7 @@
 					{{ author }}
 				</div>
 				<v-img cover aspect-ratio="1" :src="imgUrl" class="rounded-xl ml-3 mb-3"
-					:class="{ 'float-right': !isMobile }" :height="imgSizeFull" :width="imgSizeFull"></v-img>
+					:class="{ 'float-right': !isSmallScreen }" :height="imgSizeFull" :width="imgSizeFull"></v-img>
 				<span style="white-space: pre-wrap;">
 					{{ text }}
 				</span>
@@ -78,22 +78,22 @@ export default defineComponent({
 			return words.join(' ')
 		},
 		width(): string {
-			return (this.isMobile) ? '90%' : '60%'
+			return (this.isSmallScreen) ? '90%' : '60%'
 		},
 		imgSizeThm(): string {
-			return (this.isMobile) ? '100%' : '175'
+			return (this.isSmallScreen) ? '100%' : '175'
 		},
 		imgSizeFull(): string {
-			return (this.isMobile) ? '75vw' : '275'
+			return (this.isSmallScreen) ? '75vw' : '275'
 		},
-		isMobile(): boolean {
-			return this.isMobile
+		isSmallScreen(): boolean {
+			return this.name == 'xs'
 		}
 	},
 	setup() {
 		const mainStore = useMainStore()
-		const { mobile } = useDisplay()
-		return { mainStore, mobile }
+		const { name } = useDisplay()
+		return { mainStore, name }
 	}
 })
 </script>

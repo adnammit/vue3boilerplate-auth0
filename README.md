@@ -3,8 +3,18 @@
 Uses Vue3, Vite, Pinia, Vuetify 3 beta, TS and Auth0
 
 ## Quickstart
-* To setup Auth0, go to [the dashboard](https://manage.auth0.com/dashboard/) and configure your SPA app authorization. update values in `.env` to match. [see here](https://developer.auth0.com/resources/guides/spa/vue/basic-authentication) for more info
+* First setup Auth0 by going to [the dashboard](https://manage.auth0.com/dashboard/) and configure your SPA app authorization. update values in `.env` to match
+    - [see here](https://developer.auth0.com/resources/guides/spa/vue/basic-authentication) for more info about Auth0
+    - sample `.env` file:
+        ```
+        VITE_API_SERVER_URL=YOUR_SERVER_URL
+        VITE_AUTH0_DOMAIN=YOUR_AUTH0_DOMAIN
+        VITE_AUTH0_CLIENT_ID=YOUR_AUTH0_CLIENT_ID
+        VITE_AUTH0_AUDIENCE=YOUR_AUTH0_AUDIENCE
+        VITE_AUTH0_CALLBACK_URL=YOUR_APP_URL/callback
+        ```
 
+* then you can get building:
 ```sh
 # Project setup
 npm i
