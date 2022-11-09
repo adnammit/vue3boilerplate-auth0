@@ -10,8 +10,7 @@
 					{{ text }}
 				</v-col>
 				<v-col align="right">
-					<v-btn v-if="link != ''" class="ma-2 color--bold" :color="color" :icon="icon" size="x-large" :href="link"></v-btn>
-					<v-btn v-else class="ma-2 color--bold" :color="color" :icon="icon" size="x-large" :to="route"></v-btn>
+					<slot></slot>
 				</v-col>
 			</v-row>
 		</v-card-text>
@@ -21,10 +20,6 @@
 <script setup lang="ts">
 defineProps({
 	title: String,
-	text: String,
-	icon: String,
-	color: String,
-	route: Object,
-	link: String
+	text: String
 })
 </script>
