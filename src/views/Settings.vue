@@ -8,7 +8,7 @@
 					</v-card-title>
 					<v-card-text>
 						<div class="text--primary">
-							Secret settings that only users can see
+							Secret settings that only authenticated users can see
 						</div>
 					</v-card-text>
 					<v-card-actions>
